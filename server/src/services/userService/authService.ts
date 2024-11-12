@@ -51,10 +51,10 @@ export class AuthService {
     password: string,
   ): Promise<{ user: User; token: string }> {
     const user = await this.userRepository.findUserByEmail(email);
-    if (!user) throw new Error("Usuário não encontrado");
+    if (!user) throw new Error("User not found");
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
-    if (!isPasswordValid) throw new Error("Senha inválida");
+    if (!isPasswordValid) throw new Error("Invalid password");
 
     const token = jwt.sign(
       { userId: user.id, email: user.email },
@@ -73,8 +73,8 @@ export class AuthService {
         this.userRepository.findUserByRegistration(userData.registration),
       ]);
 
-    if (existingEmail) throw new Error("Este email já está em uso");
-    if (existingCPF) throw new Error("Este CPF já está em uso");
-    if (existingRegistration) throw new Error("Esta matrícula já está em uso");
+    if (existingEmail) throw new Error("Email already in use");
+    if (existingCPF) throw new Error("CPF already in use");
+    if (existingRegistration) throw new Error("Registration already in use");
   }
 }
