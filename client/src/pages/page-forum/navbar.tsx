@@ -17,21 +17,19 @@ export default function NavBar() {
           Home
         </a>
 
-        <button className="flex items-center text-sm bg-white px-3 py-1.5 gap-x-2 text-purple-600 rounded-md">
+        <button type="button" className="flex items-center text-sm bg-white px-3 py-1.5 gap-x-2 text-purple-600 rounded-md">
           <CirclePlus size={18} />
           Criar Post
         </button>
 
         {/* Perfil */}
         <Popover>
-          <PopoverTrigger>
-            <button className="border-2 border-purple-700 rounded-full">
+          <PopoverTrigger className="border-2 border-purple-700 rounded-full">
               <img
                 src="src/assets/foto_fake.png"
                 alt="foto"
                 className="w-12 rounded-full"
               />
-            </button>
           </PopoverTrigger>
           <PopoverContent className=" mr-10 mt-2">
             <div className="min-w-40 text-sm rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_4px_8px]">
