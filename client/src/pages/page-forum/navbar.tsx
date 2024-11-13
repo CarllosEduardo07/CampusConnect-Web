@@ -32,7 +32,7 @@ export default function NavBar() {
             />
           </PopoverTrigger>
           <PopoverContent className=" mr-10 mt-2">
-            <div className="min-w-40 text-sm rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_4px_8px]">
+            <div className="bg-white min-w-40 text-sm rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_4px_8px]">
               <div className="p-2 flex flex-col">
                 <span>João Silva</span>
                 <span className="text-xs text-zinc-500">
