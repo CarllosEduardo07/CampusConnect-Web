@@ -6,8 +6,8 @@
     "dev": "nodemon --config src/config/nodemon.json",
     "build": "tsc",
     "check": "tsc --noEmit",
-    "start": "ts-node src/index.ts",
-    "start:prod": "npm run build && node dist/index.js"
+    "start": "node public/index.js",
+    "start:prod": "npm run build && node public/index.js"
   },
   "keywords": [],
   "author": "",
