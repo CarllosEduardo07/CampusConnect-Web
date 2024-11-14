@@ -6,9 +6,13 @@ on:
       - main
       - developer
   pull_request:
+<<<<<<< HEAD
     branches:
       - main
       - developer
+=======
+    types: [opened, synchronize, reopened]
+>>>>>>> origin/developer
 
 jobs:
   prettier:
@@ -18,7 +22,10 @@ jobs:
       issues: write
 
     steps:
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/developer
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -34,5 +41,9 @@ jobs:
         with:
           same_commit: true #ensures that the pipeline does not overwrite the current commit
           prettier_version: 3.3.3
+<<<<<<< HEAD
           prettier_options: --write **/*.{js,jsx,ts,tsx,json,md,css}
+=======
+          prettier_options: --write **/*.{js,jsx,ts,tsx,json,css}
+>>>>>>> origin/developer
           github_token: ${{ secrets.GITHUBTOKEN }}

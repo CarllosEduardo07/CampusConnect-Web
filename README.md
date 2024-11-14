@@ -26,6 +26,7 @@ Below is the structure of the project, organized to facilitate navigation and un
 ├── 📄 README.md
 ├── 📁 scripts/
 ├── 📁 server/
+<<<<<<< HEAD
 │   ├── 📁 config/
 │   ├── 📁 controllers/
 │   ├── 📁 middleware/
@@ -35,6 +36,18 @@ Below is the structure of the project, organized to facilitate navigation and un
 │   ├── 📁 routes/
 │   ├── 📄 server.js
 │   └── 📁 utils/
+=======
+│   └── 📁 src/
+│       ├── 📁 config/
+│       ├── 📁 controllers/
+│       ├── 📁 middleware/
+│       ├── 📁 models/
+│       ├── 📄 package.json
+│       ├── 📄 package-lock.json
+│       ├── 📁 routes/
+│       ├── 📄 server.js
+│       └── 📁 utils/
+>>>>>>> origin/developer
 ```
 
 ## Getting Started 🛠️

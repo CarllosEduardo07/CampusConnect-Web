@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 611 216.53">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        isolation: isolate;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        font-family: OktaNeue-Black, 'Okta Neue';
+        font-size: 159.82px;
+        font-weight: 800;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #a979fe;
+      }
+
+      .cls-6 {
+        font-family: OktaNeue-SemiBold, 'Okta Neue';
+        font-size: 57.63px;
+        font-weight: 600;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        fill: none;
+        stroke: #a979fe;
+        stroke-linecap: round;
+        stroke-width: 16px;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-11" d="M441.35,55.12c-8.03-8.57-19.01-13.39-30.25-13.39s-22.22,4.82-30.25,13.39"/>
+    <path class="cls-11" d="M451.53,24.87c-10.71-10.71-25.17-16.87-40.42-16.87s-29.72,6.16-40.42,16.87"/>
+  </g>
+  <g class="cls-4">
+    <text class="cls-6" transform="translate(42.85 56.69)"><tspan class="cls-1" x="0" y="0">c</tspan><tspan class="cls-7" x="29.68" y="0">a</tspan><tspan x="64.89" y="0">mp</tspan><tspan class="cls-10" x="154.16" y="0">u</tspan><tspan x="187.82" y="0">s</tspan></text>
+  </g>
+  <g class="cls-4">
+    <text class="cls-5" transform="translate(0 145.56)"><tspan class="cls-2" x="0" y="0">c</tspan><tspan x="80.87" y="0">on</tspan><tspan class="cls-8" x="271.22" y="0">n</tspan><tspan class="cls-3" x="366.96" y="0">e</tspan><tspan class="cls-9" x="455.66" y="0">c</tspan><tspan x="538.76" y="0">t</tspan></text>
+  </g>
+</svg>
