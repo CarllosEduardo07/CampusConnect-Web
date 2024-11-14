@@ -1,8 +1,8 @@
 import express, { Request, Response } from "express";
-import postRoutes from "../src/routes/postRoutes";
-import postVoteRoutes from "../src/routes/postVoteRoutes";
-import commentVoteRoutes from "../src/routes/commentVoteRoutes";
-import commentRoutes from "../src/routes/commentsRoutes";
+import postRoutes from "./routes/postRoutes";
+import postVoteRoutes from "./routes/postVoteRoutes";
+import commentVoteRoutes from "./routes/commentVoteRoutes";
+import commentRoutes from "./routes/commentsRoutes";
 import dotenv from "dotenv";
 import swaggerUi from "swagger-ui-express";
 import authRouter from "./routes/authRoutes";
