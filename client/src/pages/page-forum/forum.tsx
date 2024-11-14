@@ -1,7 +1,14 @@
 import { getPosts } from '@/services/conexao';
+import dayjs from 'dayjs';
+import 'dayjs/locale/pt-br';
+import relativeTime from 'dayjs/plugin/relativeTime';
 import { ArrowBigDown, ArrowBigUp, MessageCircleMore } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import NavBar from './navbar';
+
+// Configura o dayjs para usar o plugin
+dayjs.extend(relativeTime);
+dayjs.locale('pt-br');
 
 interface Post {
   id: string;
@@ -13,14 +20,24 @@ interface Post {
 }
 
 export default function Forum() {
-  const [posts, setPostos] = useState<Post[]>([]);
+  const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         const fetchedPosts = await getPosts();
-        // console.log(fetchedPosts); // Mostra posts
-        setPostos(fetchedPosts);
+        console.log(fetchedPosts); // Mostra posts
+        
+        //Posts com a data formatada
+        const formattedSortedPosts = fetchedPosts
+        //comparando para ordenar do mais recente 
+        .sort((a: Post, b: Post) => dayjs(b.createdAt).valueOf() - dayjs(a.createdAt).valueOf())
+        .map((post: Post) => ({
+          ...post,
+          createdAt: dayjs(post.createdAt).fromNow()
+        }));
+        
+        setPosts(formattedSortedPosts);
       } catch (error) {
         console.log('Erro ao carregar Posts:', error);
       }
@@ -28,13 +45,16 @@ export default function Forum() {
     fetchPosts();
   }, []);
 
-  const filteredPost = posts.filter(post => post.title.toLowerCase().includes(''));
+  const filteredPost = posts.filter((post) => 
+    post.title.toLowerCase().includes('')
+);
+
 
   return (
-    <div className='h-full bg-zinc-100'>
+     <div className='bg-zinc-100'>
       <NavBar />
-      {filteredPost.map((post, index) => (
-        <section key={post.id || index} className='bg-white p-10 mt-10 w-[90%] mx-auto flex flex-col items-start space-y-5 rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_4px_8px]'>
+      {filteredPost.map((post) => (
+        <section key={post.id} className='bg-white p-10 mt-10 w-[90%] mx-auto flex flex-col items-start space-y-5 rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_4px_8px]'>
           <article className='flex gap-x-8'>
             <div className='space-y-5 flex flex-col items-center'>
               <ArrowBigUp strokeWidth={1.5} size={30} absoluteStrokeWidth className='cursor-pointer text-zinc-600 hover:text-zinc-900' />
